@@ -10,30 +10,12 @@
         .bg-tt-yellow { background-color: #ffcc00; }
         .text-tt-yellow { color: #ffcc00; }
         .bg-tt-light-grey { background-color: #f2f2f2; }
-        
-        .content-container {
-            max-width: 48rem;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-        }
+        .content-container { max-width: 48rem; margin-left: auto; margin-right: auto; padding-left: 1.25rem; padding-right: 1.25rem; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900 overflow-x-hidden">
-
-    <header class="bg-tt-black border-b-8 border-tt-yellow">
-        <div class="content-container py-10 md:py-12">
-            <h1 class="text-white text-3xl md:text-4xl font-black tracking-tighter uppercase italic leading-tight">
-                Authorized Service Center Locator
-            </h1>
-            <p class="text-tt-yellow font-bold tracking-[0.3em] text-sm mt-2 uppercase">TransTech Systems</p>
-        </div>
-    </header>
-
     <main class="content-container py-12">
-        
-        <div class="w-full mb-8">
+        <div class="w-full mb-8 text-left">
             <p class="text-tt-black font-medium text-[1.4rem] leading-tight max-w-2xl">
                 Find your authorized service center by entering your country or city name below.
             </p>
@@ -55,61 +37,61 @@
         <div id="results" class="space-y-10 w-full"></div>
     </main>
 
-    <footer class="bg-tt-black py-12 text-center border-t border-gray-800">
-        <p class="text-gray-500 text-[10px] font-bold tracking-[0.3em] uppercase italic px-4">&copy; 2026 TRANSTECH SYSTEMS INC. | NON-NUCLEAR TECHNOLOGY</p>
-    </footer>
-
     <script>
-        const hq = { country: "United States (Latham, NY)", company: "TransTech Systems, Inc.", phone: "518-370-5558", attn: "Global Sales & Service", email: "sales@transtechsys.com", website: "https://transtechsys.com/", lat: 42.7534, lng: -73.7487 };
+        const hq = { country: "USA", company: "TransTech Systems (HQ)", phone: "518-370-5558", attn: "Global Sales & Service", email: "calibration@transtechsys.com", website: "https://transtechsys.com/", lat: 42.7534, lng: -73.7487 };
 
         const serviceCenters = [
             hq,
             { country: "Algeria", company: "Somagex", phone: "023-47-13-15", attn: "Mohamed Yahmi", email: "md_yahmi@hotmail.com", website: "https://somagex.dz/", lat: 28.0339, lng: 1.6596 },
-            { country: "Australia", company: "Motorway Tech", phone: "+61-1300-416-313", attn: "Lorraine Duffy", email: "info@motorwaytech.com.au", website: "https://motorwaytech.com.au/", lat: -25.2744, lng: 133.7751 },
-            { country: "Brazil", company: "Solotest", phone: "+5511-3289-0211", attn: "Rodrigo Barella", email: "solotest@solotest.com", website: "https://www.solotest.com/", lat: -14.2350, lng: -51.9253 },
-            { country: "Chile", company: "Equipos de Auscultacion", phone: "+562 24069792", attn: "Carolina Fuentes", email: "cfuentes@eda.cl", website: "http://www.eda.cl/", lat: -35.6751, lng: -71.5430 },
-            { country: "Germany", company: "MIT Mess- und Prüftechnik GmbH", phone: "+49 (0) 351/87181-25", attn: "Mrs. Andrea Ulbricht", email: "info@mit-dresden.de", website: "https://www.mit-dresden.de/", lat: 51.1657, lng: 10.4515 },
-            { country: "India", company: "M/s. Taisei International", phone: "91-044-26162877", attn: "G. Parasuraman", email: "taisei@vsnl.com", website: "http://www.taiseiinternational.com/", lat: 20.5937, lng: 78.9629 },
-            { country: "Japan", company: "Nishio Rent All Co., Ltd.", phone: "+816-6241-0240", attn: "Ms. Katayama", email: "k-katayama@nishio-rent.co.jp", website: "https://www.nishio-rent.co.jp/", lat: 36.2048, lng: 138.2529 },
-            { country: "Norway", company: "ABAS AS", phone: "+47 32 24 35 30", attn: "Geir Solberg", email: "geir@abas.no", website: "https://www.abas.no/", lat: 60.4720, lng: 8.4689 }
+            { country: "Australia / NZ", company: "Motorway Tech", phone: "61-1300-416-313", attn: "Lorraine Duffy", email: "lorraine@motorwaytechnologies.com.au", website: "https://motorwaytechnologies.com.au/", lat: -25.2744, lng: 133.7751 },
+            { country: "Brazil", company: "Solotest", phone: "5511-3289-0211", attn: "Rodrigo Barella", email: "rodrigobarella@gmail.com", website: "http://www.solotest.com/", lat: -14.2350, lng: -51.9253 },
+            { country: "Chile", company: "Equipos de Auscultacion", phone: "562 24069792", attn: "Carolina Fuentes", email: "carolina.fuentes@gaussindex.com", website: "http://www.indexsa.cl/", lat: -35.6751, lng: -71.5430 },
+            { country: "Germany", company: "MIT Mess- und Prüftechnik", phone: "49 (0) 351/87181-25", attn: "Andrea Ulbricht", email: "andrea.ulbricht@mit-dresden.de", website: "https://www.mit-dresden.de/", lat: 51.1657, lng: 10.4515 },
+            { country: "India", company: "M/s. Taisei International", phone: "91-044-26162877, 45500403", attn: "G. Parasuraman", email: "g.parasuraman@yahoo.com", website: "http://www.taiseint.com/home", lat: 20.5937, lng: 78.9629 },
+            { country: "Japan", company: "Nishio Rent All Co., Ltd.", phone: "816-6241-0240", attn: "Ms. Katayama", email: "chie.katayama@nishio-rent.co.jp", website: "http://www.nishio-rent.co.jp/", lat: 36.2048, lng: 138.2529 },
+            { country: "Norway", company: "ABAS AS", phone: "47 32 24 35 30", attn: "Geir Solberg", email: "gsolberg@abas-as.no", website: "http://abas-as.simplesite.com/", lat: 60.4720, lng: 8.4689 },
+            { country: "Philippines", company: "Siccion Marketing", phone: "632 8711-8416/22", attn: "Victor Pulido", email: "vpulido@smi-group.com.ph", website: "http://www.smi-group.com.ph/", lat: 12.8797, lng: 121.7740 },
+            { country: "Saudi Arabia", company: "Al Kaabi for Testing", phone: "966 505 538 278", attn: "Mr. Dawood Khan", email: "dawood.khan@kaabi.com", website: "https://kaabi.com/", lat: 24.7136, lng: 46.6753 },
+            { country: "Turkey", company: "CFU Int'l Trade & Services", phone: "90 312-3940132", attn: "Utku CIRIK", email: "ucirik@cfu.com.tr", website: "https://www.cfu.com.tr/", lat: 38.9637, lng: 35.2433 },
+            { country: "UAE / Kuwait", company: "Burgan Equipment Co.", phone: "965-2243-7670", attn: "Mr. Ajith Kumar", email: "contact@burganequip.com", website: "http://www.burganequipment.com/", lat: 23.4241, lng: 53.8478 },
+            { country: "United Kingdom", company: "JR Technical Services UK", phone: "44-0756-130-9526", attn: "Callum Brady", email: "callum@jrts.co.uk", website: "http://www.jrts.co.uk/", lat: 55.3781, lng: -3.4360 }
         ];
 
         const usStates = ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY","ALABAMA","ALASKA","ARIZONA","ARKANSAS","CALIFORNIA","COLORADO","CONNECTICUT","DELAWARE","FLORIDA","GEORGIA","HAWAII","IDAHO","ILLINOIS","INDIANA","IOWA","KANSAS","KENTUCKY","LOUISIANA","MAINE","MARYLAND","MASSACHUSETTS","MICHIGAN","MINNESOTA","MISSISSIPPI","MISSOURI","MONTANA","NEBRASKA","NEVADA","NEW HAMPSHIRE","NEW JERSEY","NEW MEXICO","NEW YORK","NORTH CAROLINA","NORTH DAKOTA","OHIO","OKLAHOMA","OREGON","PENNSYLVANIA","RHODE ISLAND","SOUTH CAROLINA","SOUTH DAKOTA","TENNESSEE","TEXAS","UTAH","VERMONT","VIRGINIA","WASHINGTON","WEST VIRGINIA","WISCONSIN","WYOMING"];
+        const caProvinces = ["AB", "BC", "MB", "NB", "NL", "NS", "ON", "PE", "QC", "SK", "NT", "NU", "YT", "ALBERTA", "BRITISH COLUMBIA", "MANITOBA", "NEW BRUNSWICK", "NEWFOUNDLAND", "NOVA SCOTIA", "ONTARIO", "PRINCE EDWARD ISLAND", "QUEBEC", "SASKATCHEWAN", "NORTHWEST TERRITORIES", "NUNAVUT", "YUKON"];
 
         async function handleSearch() {
             const queryRaw = document.getElementById('searchInput').value.trim();
             const query = queryRaw.toUpperCase();
             const resultsDiv = document.getElementById('results');
             const loader = document.getElementById('loader');
-            
             if (!query) return;
             resultsDiv.innerHTML = '';
             loader.classList.remove('hidden');
 
-            if (usStates.includes(query) || query === 'CANADA' || query === 'USA' || query === 'UNITED STATES') {
-                renderCard(hq, `Designated Support for ${queryRaw}:`, 0, true);
+            if (usStates.includes(query) || caProvinces.includes(query) || query === 'CANADA' || query === 'USA' || query === 'UNITED STATES') {
+                renderCard(hq, `Corporate Headquarters`, 0, true, queryRaw);
                 loader.classList.add('hidden');
                 return;
             }
 
             try {
-                // Identity header added to prevent mobile browsers from blocking the request
-                const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1`, {
-                    headers: { 'User-Agent': 'TransTechLocator/1.1' }
-                });
+                const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=1&email=calibration@transtechsys.com`);
                 const data = await response.json();
-
                 if (data.length > 0) {
                     const uLat = parseFloat(data[0].lat);
                     const uLng = parseFloat(data[0].lon);
-                    const sorted = serviceCenters.map(c => ({...c, dist: getHaversine(uLat, uLng, c.lat, c.lng)})).sort((a,b) => a.dist - b.dist);
-                    renderCard(sorted[0], `Primary Selection for ${queryRaw}:`, sorted[0].dist, true);
-                    renderCard(sorted[1], `Nearest Alternative Option:`, sorted[1].dist, false);
+                    const sortedCenters = serviceCenters.map(c => ({...c, dist: getHaversine(uLat, uLng, c.lat, c.lng)})).sort((a,b) => a.dist - b.dist);
+                    sortedCenters.forEach((center, index) => {
+                        const isHQ = center.company.includes("HQ");
+                        const cardTitle = isHQ ? "Corporate Headquarters" : `Authorized Alternative Option`;
+                        if (index < 3 || isHQ) { renderCard(center, cardTitle, center.dist, isHQ, queryRaw); }
+                    });
                 } else {
                     resultsDiv.innerHTML = `<div class="bg-black text-tt-yellow p-4 font-bold text-xs uppercase text-center">Location Not Found.</div>`;
                 }
             } catch (error) {
-                resultsDiv.innerHTML = `<div class="bg-red-600 text-white p-4 font-bold text-xs uppercase text-center">Error: Service Blocked.</div>`;
+                resultsDiv.innerHTML = `<div class="bg-red-600 text-white p-4 font-bold text-xs uppercase text-center">Error: Search Unavailable. Please try again.</div>`;
             }
             loader.classList.add('hidden');
         }
@@ -121,17 +103,37 @@
             return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         }
 
-        function renderCard(data, title, dist, isPrimary) {
-            const resultsDiv = document.getElementById('results');
+        function copyToClipboard(btn, label, company, country, attn, phone, email, web) {
+            const text = `${label}:\n\n${company} (${country})\n${attn}\n${phone}\n${email}\n${web}`;
+            navigator.clipboard.writeText(text).then(() => {
+                const original = btn.innerText;
+                btn.innerText = "COPIED!";
+                btn.classList.replace('bg-tt-yellow', 'bg-green-600');
+                btn.classList.replace('text-tt-black', 'text-white');
+                setTimeout(() => {
+                    btn.innerText = original;
+                    btn.classList.replace('bg-green-600', 'bg-tt-yellow');
+                    btn.classList.replace('text-white', 'text-tt-black');
+                }, 2000);
+            });
+        }
+
+        function renderCard(data, title, dist, isPrimary, query) {
             const accent = isPrimary ? "border-tt-yellow" : "border-gray-500";
             document.getElementById('results').innerHTML += `
                 <div class="bg-tt-light-grey border-t-8 ${accent} shadow-lg rounded-b-lg overflow-hidden">
-                    <div class="px-6 py-2 text-[9px] font-black tracking-[0.25em] bg-tt-black text-white uppercase italic">${title}</div>
+                    <div class="px-6 py-2 flex justify-between items-center bg-tt-black text-white">
+                        <span class="text-[9px] font-black tracking-[0.25em] uppercase italic">${title}</span>
+                        <button onclick="copyToClipboard(this, '${title}', '${data.company}', '${data.country}', '${data.attn}', '${data.phone}', '${data.email}', '${data.website}')" 
+                                class="bg-tt-yellow text-tt-black text-[9px] font-black px-3 py-1 uppercase tracking-widest hover:bg-white transition-colors">
+                            Copy Info
+                        </button>
+                    </div>
                     <div class="p-6 md:p-8 text-left">
                         <h2 class="text-2xl md:text-3xl font-black text-tt-black uppercase tracking-tighter mb-1">${data.company}</h2>
                         <p class="text-tt-black font-bold text-sm tracking-widest uppercase mb-6">${data.country}</p>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-6 border-y border-gray-300 text-sm text-tt-black font-medium">
-                            <div><p class="text-gray-500 text-[10px] font-black uppercase mb-1">Contact</p><p class="font-bold text-lg text-tt-black">${data.phone}</p><p class="text-blue-700 font-bold underline decoration-2 underline-offset-4 break-all">${data.email}</p></div>
+                            <div><p class="text-gray-500 text-[10px] font-black uppercase mb-1">Contact</p><p class="font-bold text-lg text-tt-black">${data.phone}</p><p class="text-blue-700 font-bold underline break-all">${data.email}</p></div>
                             <div><p class="text-gray-500 text-[10px] font-black uppercase mb-1 text-left">Office/Rep</p><p class="text-lg font-bold uppercase italic text-tt-black">${data.attn}</p></div>
                         </div>
                         <a href="${data.website}" target="_blank" class="mt-8 block text-center bg-tt-black text-tt-yellow py-4 font-black text-sm uppercase tracking-widest shadow-md">Visit Partner Website</a>
